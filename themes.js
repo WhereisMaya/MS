@@ -6468,8 +6468,8 @@ const themePresets = {
         ],
         bg: "images/default1.png"
     },
-     "gmc": {
-        name: "GMC",
+     "2005": {
+        name: "2005",
         ideas: [
           {
             "title": "📝 Example",
@@ -6503,6 +6503,114 @@ const themePresets = {
           }
         ],
         bg: "images/default7.png"
+      },
+      "laurels": {
+        name: "GIC - Laurels",
+        ideas: [
+          {
+            "title": "📝 Example",
+            "description": "Click to edit",
+            "x": 400,
+            "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "white",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          {
+            "title": "💡 Template",
+            "description": "Start here",
+            "x": 600,
+            "y": 400,
+            "vx": 1.5,
+            "vy": -1.2,
+            "color": "hsl(120, 100%, 70%)",
+            "textColor": "white",
+            "radius": 70,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 14,
+            "rotation": 0
+          }
+        ],
+        bg: "images/default3.png"
+      },
+      "notts": {
+        name: "GIC - Nottingham",
+        ideas: [
+          {
+            "title": "📝 Example",
+            "description": "Click to edit",
+            "x": 400,
+            "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "white",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          {
+            "title": "💡 Template",
+            "description": "Start here",
+            "x": 600,
+            "y": 400,
+            "vx": 1.5,
+            "vy": -1.2,
+            "color": "hsl(120, 100%, 70%)",
+            "textColor": "white",
+            "radius": 70,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 14,
+            "rotation": 0
+          }
+        ],
+        bg: "images/default3.png"
+      },
+      "tavistock": {
+        name: "GIC - Tavistock",
+        ideas: [
+          {
+            "title": "📝 Example",
+            "description": "Click to edit",
+            "x": 400,
+            "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "white",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          {
+            "title": "💡 Template",
+            "description": "Start here",
+            "x": 600,
+            "y": 400,
+            "vx": 1.5,
+            "vy": -1.2,
+            "color": "hsl(120, 100%, 70%)",
+            "textColor": "white",
+            "radius": 70,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 14,
+            "rotation": 0
+          }
+        ],
+        bg: "images/default3.png"
       },
       "gmc": {
         name: "GMC",
@@ -6612,42 +6720,7 @@ const themePresets = {
         ],
         bg: "images/default2.png"
       },
-      "laurels": {
-        name: "Laurels",
-        ideas: [
-          {
-            "title": "📝 Example",
-            "description": "Click to edit",
-            "x": 400,
-            "y": 300,
-            "vx": 0,
-            "vy": 0,
-            "color": "hsl(200, 100%, 70%)",
-            "textColor": "white",
-            "radius": 80,
-            "font": "Arial",
-            "glow": true,
-            "fontSize": 16,
-            "rotation": 0
-          },
-          {
-            "title": "💡 Template",
-            "description": "Start here",
-            "x": 600,
-            "y": 400,
-            "vx": 1.5,
-            "vy": -1.2,
-            "color": "hsl(120, 100%, 70%)",
-            "textColor": "white",
-            "radius": 70,
-            "font": "Arial",
-            "glow": true,
-            "fontSize": 14,
-            "rotation": 0
-          }
-        ],
-        bg: "images/default3.png"
-      },
+      
       "phso": {
         name: "PHSO",
         ideas: [
@@ -6684,8 +6757,44 @@ const themePresets = {
         ],
         bg: "images/default4.png"
       },
+      "psa": {
+        name: "PSA",
+        ideas: [
+          {
+            "title": "📝 Example",
+            "description": "Click to edit",
+            "x": 400,
+            "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "white",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          {
+            "title": "💡 Template",
+            "description": "Start here",
+            "x": 600,
+            "y": 400,
+            "vx": 1.5,
+            "vy": -1.2,
+            "color": "hsl(120, 100%, 70%)",
+            "textColor": "white",
+            "radius": 70,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 14,
+            "rotation": 0
+          }
+        ],
+        bg: "images/default3.png"
+      },
       "nhs": {
-        name: "NHS",
+        name: "NHS Complaints",
         ideas: [
           {
             "title": "📝 Example",
