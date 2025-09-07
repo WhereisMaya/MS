@@ -1,0 +1,22 @@
+{
+  "general": [
+    {
+      "timestamp": "2025-08-06 17:09:29",
+      "level": "INFO",
+      "message": "Added bot: AAPL_MA_Bot",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-06 17:09:29",
+      "level": "INFO",
+      "message": "Added bot: GOOGL_RSI_Bot",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-06 17:09:29",
+      "level": "INFO",
+      "message": "Added bot: TSLA_MACD_Bot",
+      "bot_name": null
+    }
+  ]
+}

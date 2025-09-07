@@ -1,0 +1,56 @@
+2025-08-06 17:09:29,782 - ATB - INFO - Added bot: AAPL_MA_Bot
+2025-08-06 17:09:29,782 - ATB - INFO - Added bot: GOOGL_RSI_Bot
+2025-08-06 17:09:29,783 - ATB - INFO - Added bot: TSLA_MACD_Bot
+2025-08-16 02:03:24,159 - ATB - INFO - Added bot: AAPL_MA_Bot
+2025-08-16 02:03:24,159 - ATB - INFO - Added bot: GOOGL_RSI_Bot
+2025-08-16 02:03:24,160 - ATB - INFO - Added bot: TSLA_MACD_Bot
+2025-08-17 17:42:30,797 - ATB - INFO - Added bot: AAPL_MA_Bot
+2025-08-17 17:42:30,798 - ATB - INFO - Added bot: GOOGL_RSI_Bot
+2025-08-17 17:42:30,798 - ATB - INFO - Added bot: TSLA_MACD_Bot
+2025-08-17 17:42:35,562 - ATB - INFO - Added bot: Bot_4
+2025-08-17 17:42:39,020 - ATB - INFO - Started bot: AAPL_MA_Bot
+2025-08-17 17:42:39,021 - ATB - INFO - Bot 'AAPL_MA_Bot' started successfully
+2025-08-17 17:42:43,963 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.87
+2025-08-17 17:42:48,931 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.72
+2025-08-17 17:42:53,932 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.08
+2025-08-17 17:42:58,931 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $101.39
+2025-08-17 17:43:03,933 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.73
+2025-08-17 17:43:08,932 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.64
+2025-08-17 17:43:13,933 - ATB - INFO - Bot 'AAPL_MA_Bot' SELL 8 AAPL @ $98.81
+2025-08-17 17:43:13,935 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.81
+2025-08-17 17:43:18,931 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $101.23
+2025-08-17 17:43:23,932 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.27
+2025-08-17 17:43:28,932 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.84
+2025-08-17 17:43:33,935 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.20
+2025-08-17 17:43:38,938 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.97
+2025-08-17 17:43:43,941 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.18
+2025-08-17 17:43:48,942 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $101.93
+2025-08-17 17:43:53,944 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.43
+2025-08-17 17:43:54,033 - ATB - INFO - Stopped bot: AAPL_MA_Bot
+2025-08-17 17:43:54,033 - ATB - INFO - Bot 'AAPL_MA_Bot' stopped
+2025-08-18 20:29:54,342 - ATB - INFO - Added bot: AAPL_MA_Bot
+2025-08-18 20:29:54,343 - ATB - INFO - Added bot: GOOGL_RSI_Bot
+2025-08-18 20:29:54,343 - ATB - INFO - Added bot: TSLA_MACD_Bot
+2025-08-18 20:30:30,576 - ATB - INFO - Started bot: AAPL_MA_Bot
+2025-08-18 20:30:30,577 - ATB - INFO - Bot 'AAPL_MA_Bot' started successfully
+2025-08-18 20:30:35,359 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.87
+2025-08-18 20:30:40,258 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.99
+2025-08-18 20:30:45,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.67
+2025-08-18 20:30:50,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.55
+2025-08-18 20:30:55,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.61
+2025-08-18 20:31:00,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.45
+2025-08-18 20:31:05,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $101.81
+2025-08-18 20:31:10,258 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.13
+2025-08-18 20:31:15,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.21
+2025-08-18 20:31:20,258 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.60
+2025-08-18 20:31:25,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.65
+2025-08-18 20:31:30,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.77
+2025-08-18 20:31:35,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.43
+2025-08-18 20:31:40,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.20
+2025-08-18 20:31:45,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.52
+2025-08-18 20:31:50,257 - ATB - INFO - Bot 'AAPL_MA_Bot' BUY 10 AAPL @ $99.04
+2025-08-18 20:31:50,259 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.04
+2025-08-18 20:31:55,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.75
+2025-08-18 20:32:00,257 - ATB - INFO - Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.37
+2025-08-18 20:32:03,327 - ATB - INFO - Stopped bot: AAPL_MA_Bot
+2025-08-18 20:32:03,327 - ATB - INFO - Bot 'AAPL_MA_Bot' stopped

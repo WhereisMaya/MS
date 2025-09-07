@@ -1,0 +1,148 @@
+{
+  "general": [
+    {
+      "timestamp": "2025-08-17 17:42:30",
+      "level": "INFO",
+      "message": "Added bot: AAPL_MA_Bot",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:42:30",
+      "level": "INFO",
+      "message": "Added bot: GOOGL_RSI_Bot",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:42:30",
+      "level": "INFO",
+      "message": "Added bot: TSLA_MACD_Bot",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:42:35",
+      "level": "INFO",
+      "message": "Added bot: Bot_4",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:42:39",
+      "level": "INFO",
+      "message": "Started bot: AAPL_MA_Bot",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:42:39",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' started successfully",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:42:43",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.87",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:42:48",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.72",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:42:53",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.08",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:42:58",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $101.39",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:03",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.73",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:08",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.64",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:13",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' SELL 8 AAPL @ $98.81",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:13",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.81",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:18",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $101.23",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:23",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.27",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:28",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.84",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:33",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.20",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:38",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $99.97",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:43",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $98.18",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:48",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $101.93",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:53",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' monitoring AAPL - Current price: $100.43",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:54",
+      "level": "INFO",
+      "message": "Stopped bot: AAPL_MA_Bot",
+      "bot_name": null
+    },
+    {
+      "timestamp": "2025-08-17 17:43:54",
+      "level": "INFO",
+      "message": "Bot 'AAPL_MA_Bot' stopped",
+      "bot_name": null
+    }
+  ]
+}

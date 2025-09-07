@@ -1,0 +1,33 @@
+{
+  "app": {
+    "name": "ATB - Auto Trading Bot",
+    "version": "1.0.0",
+    "window_size": [
+      1200,
+      800
+    ],
+    "theme": "dark"
+  },
+  "logging": {
+    "level": "INFO",
+    "file_path": "logs/atb.log",
+    "max_file_size": "10MB",
+    "backup_count": 5
+  },
+  "trading": {
+    "default_broker": "paper",
+    "paper_balance": 100000.0,
+    "max_positions": 10,
+    "risk_per_trade": 0.02
+  },
+  "backtesting": {
+    "default_start_date": "2023-01-01",
+    "default_end_date": "2023-12-31",
+    "default_symbols": [
+      "AAPL",
+      "GOOGL",
+      "MSFT",
+      "TSLA"
+    ]
+  }
+}
