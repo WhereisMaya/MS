@@ -6538,7 +6538,7 @@ const themePresets = {
             "rotation": 0
           }
         ],
-        bg: "images/default3.png"
+        bg: "images/default33.png"
       },
       "notts": {
         name: "GIC - Nottingham",
@@ -6547,6 +6547,21 @@ const themePresets = {
             "title": "📝 Example",
             "description": "Click to edit",
             "x": 400,
+            "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "white",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+           {
+            "title": "ICO",
+            "description": "Click to edit",
+            "x": 500,
             "y": 300,
             "vx": 0,
             "vy": 0,
@@ -6574,7 +6589,7 @@ const themePresets = {
             "rotation": 0
           }
         ],
-        bg: "images/default3.png"
+        bg: "images/default28.png"
       },
       "tavistock": {
         name: "GIC - Tavistock",
@@ -6610,7 +6625,7 @@ const themePresets = {
             "rotation": 0
           }
         ],
-        bg: "images/default3.png"
+        bg: "images/default25.png"
       },
       "gmc": {
         name: "GMC",
@@ -6683,6 +6698,42 @@ const themePresets = {
           }
         ],
         bg: "images/default2.png"
+      },
+       "injuries": {
+        name: "Injuries",
+        ideas: [
+          {
+            "title": "📝 Example",
+            "description": "Click to edit",
+            "x": 400,
+            "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "white",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          {
+            "title": "💡 Template",
+            "description": "Start here",
+            "x": 600,
+            "y": 400,
+            "vx": 1.5,
+            "vy": -1.2,
+            "color": "hsl(120, 100%, 70%)",
+            "textColor": "white",
+            "radius": 70,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 14,
+            "rotation": 0
+          }
+        ],
+        bg: "images/default9.png"
       },
        "nmc": {
         name: "NMC",
