@@ -2593,7 +2593,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const panel = document.getElementById('controlHubPanel');
       if (panel) panel.classList.add('minimized');
     }
-    
+    // Right-click on Analysis button toggles Control Hub
+    const analysisBtn = document.querySelector('[data-icon="analysis"]');
+    if (analysisBtn) {
+      analysisBtn.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        if (controlHubOpen) {
+          hideControlHubPanel();
+        } else {
+          showControlHubPanel();
+        }
+        return false;
+      });
+    }
   } catch(_) {}
 });
 
