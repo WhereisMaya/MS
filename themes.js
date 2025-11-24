@@ -6502,7 +6502,7 @@ const themePresets = {
             "rotation": 0
           }
         ],
-        bg: "images/default27.png"
+        bg: "images/default28.png"
       },
       "laurels": {
         name: "GIC - Laurels",
