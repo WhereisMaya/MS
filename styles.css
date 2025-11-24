@@ -776,6 +776,10 @@ button[data-png="bucheck"].has-png {
   overflow-y: auto;
 }
 
+.control-hub-panel.expanded {
+  width: 960px;
+}
+
 .control-hub-header {
   display: flex;
   align-items: center;

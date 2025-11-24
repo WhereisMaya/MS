@@ -296,18 +296,8 @@ function toggleDrawingMode() {
   
   // Update cursor and CSS class
   if (isDrawingMode) {
-    // Store current speed and pause animation
-    // Ensure we always store a valid speed for restoration
-    if (speedMultiplier > 0) {
-      previousSpeed = speedMultiplier;
-      originalSpeed = speedMultiplier; // Update original speed
-    } else if (originalSpeed > 0) {
-      previousSpeed = originalSpeed;
-    } else {
-      // Fallback to default speed if no valid speed is available
-      previousSpeed = 1;
-      originalSpeed = 1;
-    }
+    // Store current speed (including paused state) and pause animation
+    previousSpeed = speedMultiplier;
     speedMultiplier = 0;
     
     // Update the speed slider to reflect paused state
@@ -344,13 +334,11 @@ function toggleDrawingMode() {
       PNGLoader.applyPNG(drawButton, 'draw2.png');
     }
   } else {
-    // Restore previous speed with fallback to ensure smooth performance
-    if (previousSpeed && previousSpeed > 0) {
+    // Restore exactly the previous speed (including 0 for paused)
+    if (typeof previousSpeed === 'number') {
       speedMultiplier = previousSpeed;
     } else {
-      // Fallback to a reasonable default speed if previousSpeed is invalid
-      speedMultiplier = 1;
-      previousSpeed = 1;
+      speedMultiplier = 0;
     }
     
     // Update the speed slider to reflect restored state
@@ -2621,6 +2609,11 @@ function openBubbleTracker() {
   renderControlHubSection('bubbleTracker');
   updateControlHubHUD(true, 'Opened Bubble Tracker HUD');
 }
+function openBubbleOverviewPanel() {
+  showControlHubPanel();
+  renderControlHubSection('bubbleOverviewPanel');
+  updateControlHubHUD(true, 'Opened Bubble Overview Panel');
+}
 function openTimelinePlayback() {
   showControlHubPanel();
   renderControlHubSection('timeline');
@@ -2709,6 +2702,7 @@ function openBroadcastMode() {
 }
 
 window.openBubbleTracker = openBubbleTracker;
+window.openBubbleOverviewPanel = openBubbleOverviewPanel;
 window.openTimelinePlayback = openTimelinePlayback;
 window.openTranscriptionDropzone = openTranscriptionDropzone;
 window.openAutoTrader = openAutoTrader;
@@ -2978,6 +2972,141 @@ function renderControlHubSection(section) {
       update();
       // Also re-run update after small delay to catch late inits
       setTimeout(update, 200);
+      break;
+    }
+    case 'bubbleOverviewPanel': {
+      root.innerHTML = '<div class="hub-section">'
+        + '<h4>🤔 Bubble Overview Panel <button id="boExpandBtn" class="hub-button" style="margin-left:8px;">⤢</button></h4>'
+        + '<div id="bubbleOverviewList" style="display:flex; flex-direction:column; gap:8px; max-height:420px; overflow:auto;"></div>'
+        + '</div>';
+      const controlHub = document.getElementById('controlHubPanel');
+      const expandBtn = root.querySelector('#boExpandBtn');
+      if (expandBtn && controlHub) {
+        expandBtn.onclick = () => {
+          const expanded = controlHub.classList.toggle('expanded');
+          expandBtn.textContent = expanded ? '⤡' : '⤢';
+        };
+      }
+      const listEl = root.querySelector('#bubbleOverviewList');
+      const toIso = (d, t) => {
+        try {
+          const date = (d && typeof d === 'string') ? d : '';
+          const time = (t && typeof t === 'string') ? t : '00:00:00';
+          return new Date(`${date}T${time}`);
+        } catch(_) {
+          return new Date();
+        }
+      };
+      const isBlobOrData = (u) => typeof u === 'string' && (u.startsWith('blob:') || u.startsWith('data:'));
+      const renderAttachment = (att, bubbleIdx, attIdx) => {
+        if (!att) return '';
+        const name = escapeHtml(att.name || 'attachment');
+        const url = att.url || att.dataUrl || '';
+        const type = (att.type || (att.name ? guessMimeType(att.name) : '') || '').toLowerCase();
+        if (!url) return `<div style="font-size:12px; color:#aaa;">${name}</div>`;
+        if (type.startsWith('audio/')) {
+          return `<div><div style="font-size:12px; margin-bottom:4px;">${name}</div><audio controls src="${url}" style="width:100%;"></audio></div>`;
+        }
+        if (type.startsWith('video/')) {
+          return `<div><div style="font-size:12px; margin-bottom:4px;">${name}</div><video controls src="${url}" style="width:100%; max-height:260px;"></video></div>`;
+        }
+        if (type.startsWith('image/')) {
+          return `<div><div style="font-size:12px; margin-bottom:4px;">${name}</div><img src="${url}" alt="${name}" style="max-width:100%; border:1px solid #333; border-radius:6px;"/></div>`;
+        }
+        // DOC/DOCX — avoid auto-open; show manual open button
+        const isDoc = type.includes('msword') || type.includes('wordprocessingml') || (att.name || '').toLowerCase().endsWith('.doc') || (att.name || '').toLowerCase().endsWith('.docx');
+        if (isDoc) {
+          return `<div><div style="font-size:12px; margin-bottom:4px;">${name}</div><div style="font-size:12px; color:#aaa; margin-bottom:6px;">Preview not supported. Use Open to view.</div><div><a href="${url}" target="_blank" rel="noopener" class="hub-button" style="padding:4px 8px;">Open</a></div></div>`;
+        }
+        // PDF — embed with object URL; hydrate remote URLs to prevent Content-Disposition downloads
+        const isPdf = type.includes('pdf') || (att.name || '').toLowerCase().endsWith('.pdf');
+        if (isPdf) {
+          if (isBlobOrData(url)) {
+            return `<div><div style="font-size:12px; margin-bottom:4px;">${name}</div><object data="${url}#toolbar=0" type="application/pdf" style="width:100%; height:260px; border:1px solid #333; border-radius:6px;"><div style="font-size:12px; color:#aaa;">PDF preview unavailable. <a href="${url}" target="_blank" rel="noopener">Open</a></div></object></div>`;
+          }
+          const encoded = encodeURIComponent(url);
+          return `<div><div style="font-size:12px; margin-bottom:4px;">${name}</div><div class="bo-preview" data-preview-type="pdf" data-preview-url="${encoded}" style="width:100%; height:260px; border:1px solid #333; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#aaa; font-size:12px;">Loading PDF preview…</div></div>`;
+        }
+        // Text/CSV — hydrate remote into blob to avoid download behaviors
+        if (type.startsWith('text/') || type.includes('csv')) {
+          if (isBlobOrData(url)) {
+            return `<div><div style="font-size:12px; margin-bottom:4px;">${name}</div><iframe src="${url}" style="width:100%; height:220px; border:1px solid #333; border-radius:6px; background:#111;"></iframe></div>`;
+          }
+          const encoded = encodeURIComponent(url);
+          return `<div><div style="font-size:12px; margin-bottom:4px;">${name}</div><div class="bo-preview" data-preview-type="text" data-preview-url="${encoded}" style="width:100%; height:220px; border:1px solid #333; border-radius:6px; background:#111; display:flex; align-items:center; justify-content:center; color:#aaa; font-size:12px;">Loading preview…</div></div>`;
+        }
+        return `<div style="display:flex; align-items:center; justify-content:space-between; gap:8px;"><div style="font-size:12px;">${name}</div><a href="${url}" target="_blank" rel="noopener" class="hub-button" style="padding:4px 8px;">Open</a></div>`;
+      };
+      const render = () => {
+        if (!listEl) return;
+        const items = (Array.isArray(ideas) ? ideas : []).map((idea, idx) => ({
+          idx,
+          idea,
+          date: idea && idea.createdDate ? idea.createdDate : '',
+          time: idea && idea.createdTime ? idea.createdTime : ''
+        })).sort((a, b) => toIso(a.date, a.time) - toIso(b.date, b.time));
+        if (items.length === 0) {
+          listEl.innerHTML = '<div style="font-size:13px; color:#bbb;">No bubbles on canvas yet.</div>';
+          return;
+        }
+        const html = items.map(({ idea, idx, date, time }) => {
+          const title = escapeHtml(idea.title || `Bubble ${idx + 1}`);
+          const desc = escapeHtml(idea.description || '');
+          const files = Array.isArray(idea.attachments) ? idea.attachments : [];
+          const filesList = files.map(a => {
+            const url = a && (a.url || a.dataUrl) || '';
+            const name = escapeHtml(a && a.name || 'attachment');
+            return `<li style="margin:2px 0;"><a href="${url}" target="_blank" rel="noopener" style="color:#9ecbff; text-decoration:none;">${name}</a></li>`;
+          }).join('');
+          const viewers = files.map((a, aidx) => renderAttachment(a, idx, aidx)).join('');
+          const borderColor = (idea && (idea.glowColor || idea.color)) ? (idea.glowColor || idea.color) : '#333';
+          const thumb = (idea && idea.image) ? `<img src="${idea.image}" alt="" style="width:72px; height:72px; object-fit:cover; border:1px solid rgba(255,255,255,0.15); border-radius:6px; flex:0 0 auto;"/>` : '';
+          return `
+            <div style="border:1px solid ${borderColor}; background:rgba(20,20,20,0.9); border-radius:8px; padding:10px;">
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                ${thumb}
+                <div style="flex:1;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:6px;">
+                    <div style="font-weight:600; color:#fff;">${title}</div>
+                    <div style="font-size:12px; color:#ccc;">${escapeHtml(date || '—')} ${escapeHtml(time || '')}</div>
+                  </div>
+                  ${desc ? `<div style="font-size:13px; color:#ddd; margin-bottom:8px; line-height:1.35;">${desc}</div>` : ''}
+                  ${files.length ? `<div style="margin-top:6px;">
+                    <div style="font-size:12px; color:#8FE04A; margin-bottom:4px;">Attachments</div>
+                    <ul style="margin:0 0 8px 16px; padding:0; list-style:disc;">${filesList}</ul>
+                    <div style="display:flex; flex-direction:column; gap:8px;">${viewers}</div>
+                  </div>` : `<div style="font-size:12px; color:#999;">No attachments</div>`}
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+        listEl.innerHTML = html;
+        // Hydrate remote previews (PDF/Text) to avoid auto-downloads
+        const previews = listEl.querySelectorAll('.bo-preview[data-preview-type]');
+        previews.forEach(async (el) => {
+          try {
+            const kind = el.getAttribute('data-preview-type');
+            const u = decodeURIComponent(el.getAttribute('data-preview-url') || '');
+            if (!u) return;
+            const res = await fetch(u, { cache: 'no-cache' });
+            if (!res.ok) { el.textContent = 'Preview failed.'; return; }
+            if (kind === 'pdf') {
+              const blob = await res.blob();
+              const obj = URL.createObjectURL(blob);
+              el.outerHTML = `<object data="${obj}#toolbar=0" type="application/pdf" style="width:100%; height:260px; border:1px solid #333; border-radius:6px;"><div style="font-size:12px; color:#aaa;">PDF preview unavailable. <a href="${u}" target="_blank" rel="noopener">Open</a></div></object>`;
+            } else if (kind === 'text') {
+              const blob = await res.blob();
+              const obj = URL.createObjectURL(blob);
+              el.outerHTML = `<iframe src="${obj}" style="width:100%; height:220px; border:1px solid #333; border-radius:6px; background:#111;"></iframe>`;
+            }
+          } catch (_) {
+            el.textContent = 'Preview failed.';
+          }
+        });
+      };
+      render();
+      setTimeout(render, 200);
       break;
     }
     case 'timeline': {
