@@ -7128,7 +7128,6 @@ const themePresets = {
             "fontSize": 16,
             "rotation": 0
           },
-          },
           {
             "title": "MReader",
             "description": "Video Player | ",
