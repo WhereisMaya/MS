@@ -6952,11 +6952,11 @@ const themePresets = {
         ],
         bg: "images/games6.png"
       },
-      "PAFC": {
-        name: "PAFC",
+      "WCC": {
+        name: "WCCornwall",
         ideas: [
           {
-            "title": "March 2023",
+            "title": "November 2024",
             "description": "Click to edit",
             "x": 400,
             "y": 300,
@@ -6971,7 +6971,7 @@ const themePresets = {
             "rotation": 0
           },
           {
-            "title": "October 2024",
+            "title": "February 2025",
             "description": "Start here",
             "x": 600,
             "y": 400,
@@ -7058,11 +7058,11 @@ const themePresets = {
         ],
         bg: "images/default4.png"
       },
-      "ToDo": {
-        name: "To Do",
+      "PAFC": {
+        name: "PAFC",
         ideas: [
           {
-            "title": "📝 Example",
+            "title": "March 2023",
             "description": "Click to edit",
             "x": 400,
             "y": 300,
@@ -7077,7 +7077,7 @@ const themePresets = {
             "rotation": 0
           },
           {
-            "title": "💡",
+            "title": "October 2024",
             "description": "Start here",
             "x": 600,
             "y": 400,
@@ -7085,6 +7085,70 @@ const themePresets = {
             "vy": -1.2,
             "color": "hsl(120, 100%, 70%)",
             "textColor": "white",
+            "radius": 70,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 14,
+            "rotation": 0
+          }
+        ],
+      "ToDo": {
+        name: "To Do",
+        ideas: [
+          {
+            "title": "Plym News",
+            "description": "Click to edit",
+            "x": 400,
+            "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "white",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          {
+            "title": "Devonews",
+            "description": "Click to edit",
+            "x": 300,
+            "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "green",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          {
+            "title": "Plym News",
+            "description": "Click to edit",
+            "x": 400,
+            "y": 200,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "white",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          {
+            "title": "Salts of Salvation",
+            "description": "Start here",
+            "x": 600,
+            "y": 400,
+            "vx": 1.5,
+            "vy": -1.2,
+            "color": "hsl(120, 100%, 70%)",
+            "textColor": "red",
             "radius": 70,
             "font": "Arial",
             "glow": true,
