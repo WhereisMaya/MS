@@ -6916,6 +6916,42 @@ const themePresets = {
         ],
         bg: "images/games6.png"
       },
+       "Curaleaf": {
+        name: "Curaleaf",
+        ideas: [
+          {
+            "title": "October 2024",
+            "description": "Click to edit",
+            "x": 400,
+            "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "white",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          {
+            "title": "November 2025",
+            "description": "Start here",
+            "x": 600,
+            "y": 400,
+            "vx": 1.5,
+            "vy": -1.2,
+            "color": "hsl(120, 100%, 70%)",
+            "textColor": "white",
+            "radius": 70,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 14,
+            "rotation": 0
+          }
+        ],
+        bg: "images/default4.png"
+      },
       "ToDo": {
         name: "To Do",
         ideas: [
