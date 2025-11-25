@@ -7114,10 +7114,26 @@ const themePresets = {
             "rotation": 0
           },
           {
-            "title": "Devonews",
+            "title": "Devonews TV",
             "description": "Click to edit",
             "x": 300,
             "y": 300,
+            "vx": 0,
+            "vy": 0,
+            "color": "hsl(200, 100%, 70%)",
+            "textColor": "green",
+            "radius": 80,
+            "font": "Arial",
+            "glow": true,
+            "fontSize": 16,
+            "rotation": 0
+          },
+          },
+          {
+            "title": "MReader",
+            "description": "Video Player | ",
+            "x": 200,
+            "y": 200,
             "vx": 0,
             "vy": 0,
             "color": "hsl(200, 100%, 70%)",
