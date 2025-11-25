@@ -6986,6 +6986,8 @@ const themePresets = {
             "rotation": 0
           }
         ],
+        bg: "images/default4.png"
+      },
       "WestHoe Surgery": {
         name: "WestHoe Surgery",
         ideas: [
