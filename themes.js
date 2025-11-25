@@ -6807,7 +6807,6 @@ const themePresets = {
         ],
         bg: "images/default2.png"
       },
-      
       "phso": {
         name: "PHSO",
         ideas: [
@@ -6952,7 +6951,7 @@ const themePresets = {
         ],
         bg: "images/games6.png"
       },
-      "WCC": {
+      "wom": {
         name: "WCCornwall",
         ideas: [
           {
@@ -7094,6 +7093,8 @@ const themePresets = {
             "rotation": 0
           }
         ],
+       bg: "images/default4.png"
+      },
       "ToDo": {
         name: "To Do",
         ideas: [
