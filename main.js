@@ -3739,7 +3739,7 @@ function confirmThemePassword() {
   const input = document.getElementById('themePasswordInput');
   const requested = window._requestedProtectedTheme || 'maya';
   const value = input ? (input.value || '').trim() : '';
-  if (value === 'Facts') {
+  if (value === '123') {
     window._mayaUnlocked = true;
     hideThemePasswordPanel();
     switchTheme(requested);
