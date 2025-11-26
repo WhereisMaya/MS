@@ -7246,7 +7246,7 @@ const themePresets = {
             "rotation": 0
           }
         ],
-        bg: "images/default76.png"
+        bg: "images/maya2.png"
       }
     }
   },
