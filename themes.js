@@ -7636,7 +7636,7 @@ const themePresets = {
     "ballVelocityDecay": 0,
     "attachments": [],
     "urls": [],
-    "image": "images/l27.png"
+    "image": "images/t6.png"
   },
   {
     "title": "Pesto Pasta",
