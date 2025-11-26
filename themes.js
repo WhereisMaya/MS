@@ -7641,8 +7641,8 @@ const themePresets = {
   {
     "title": "Pesto Pasta",
     "description": "",
-    "x": 123.50849095322337,
-    "y": 900,
+    "x": 124.50849095322337,
+    "y": 912,
     "vx": -0.43109463218954636,
     "vy": -1.4510165040151979,
     "color": "hsl(112.54950806756386, 100%, 70%)",
@@ -7673,7 +7673,7 @@ const themePresets = {
   {
     "title": "Curry",
     "description": "",
-    "x": 423.50849095322337,
+    "x": 423.5084909532234,
     "y": 900,
     "vx": -0.43109463218954636,
     "vy": -1.4510165040151979,
@@ -7700,14 +7700,14 @@ const themePresets = {
     "ballVelocityBoost": 0,
     "ballVelocityDecay": 0,
     "attachments": [],
-    "urls": []
+    "urls": [],
     "image": "images/t5.png",
     "fontSize": 16
   },
   {
     "title": "Spicy Spuds",
     "description": "",
-    "x": 346.801545181224,
+    "x": 333.801545181224,
     "y": 909,
     "vx": 1.5528898121463468,
     "vy": -0.7970607790733844,
